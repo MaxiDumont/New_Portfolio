@@ -83,7 +83,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
@@ -104,7 +104,7 @@ export const AboutSection = () => {
 
             {/*card separetor*/}
 
-            <Card className="h-[320px] p-0 md:col-span-3">
+            <Card className="h-[320px] p-0 md:col-span-3 ">
               <CardHeader
                 title="My Toolbox"
                 description="Discover the tools that help me build."
@@ -120,8 +120,8 @@ export const AboutSection = () => {
           </div>
 
           {/*card separetor*/}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 ">
-            <Card className="h-[320px] p-0 flex flex-col col-span-3">
+          <div className="md:grid md:grid-cols-5 gap-8 ">
+            <Card className="h-[320px] p-0 flex flex-col col-span-3 mb-8 ">
               <CardHeader
                 title="Beyond the code"
                 description="Explore my interests and hobbies beyond the digital realms."
