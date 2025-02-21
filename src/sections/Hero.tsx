@@ -23,35 +23,35 @@ export const HeroSection = () => {
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
-        <OrbitHero size={800} rotation={-72}>
-          <StarIcon className="size-28 text-emerald-300" />
-        </OrbitHero>
-        <OrbitHero size={550} rotation={20}>
-          <StarIcon className="size-12 text-emerald-300" />
-        </OrbitHero>
-        <OrbitHero size={590} rotation={98}>
-          <StarIcon className="size-8 text-emerald-300" />
-        </OrbitHero>
-        <OrbitHero size={430} rotation={-14}>
+        <OrbitHero size={430} rotation={-14} shouldOrbit={true} OrbitDuration="30s" shouldSpin={true} spinDuration="20s">
           <SparkIcon className="size-8 text-emerald-300/20" />
         </OrbitHero>
-        <OrbitHero size={440} rotation={-79}>
+        <OrbitHero size={440} rotation={-79} shouldOrbit={true} OrbitDuration="33s" shouldSpin={true} spinDuration="15s">
           <SparkIcon className="size-5 text-emerald-300/20" />
         </OrbitHero>
-        <OrbitHero size={530} rotation={178}>
+        <OrbitHero size={520} rotation={-41} shouldOrbit={true} OrbitDuration="36s" shouldSpin={true} spinDuration="15s">
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </OrbitHero>
+        <OrbitHero size={530} rotation={178} shouldOrbit={true} OrbitDuration="39s" shouldSpin={true} spinDuration="15s">
           <SparkIcon className="size-10 text-emerald-300/20" />
         </OrbitHero>
-        <OrbitHero size={710} rotation={144}>
+        <OrbitHero size={550} rotation={20} shouldOrbit={true} OrbitDuration="42s" shouldSpin={true} spinDuration="10s">
+          <StarIcon className="size-12 text-emerald-300" />
+        </OrbitHero>
+        <OrbitHero size={590} rotation={98} shouldOrbit={true} OrbitDuration="45s" shouldSpin={true} spinDuration="15s">
+          <StarIcon className="size-8 text-emerald-300" />
+        </OrbitHero>
+        <OrbitHero size={650} rotation={-5} shouldOrbit={true} OrbitDuration="48s" shouldSpin={true} spinDuration="12s">
+          <div className="size-2 rounded-full bg-emerald-300/20" />
+        </OrbitHero>
+        <OrbitHero size={710} rotation={144} shouldOrbit={true} OrbitDuration="51s" shouldSpin={true} spinDuration="15s">
           <SparkIcon className="size-14 text-emerald-300/20" />
         </OrbitHero>
-        <OrbitHero size={720} rotation={85}>
+        <OrbitHero size={720} rotation={85} shouldOrbit={true} OrbitDuration="54s" shouldSpin={true} spinDuration="13s">
           <div className="size-3 rounded-full bg-emerald-300/20" />
         </OrbitHero>
-        <OrbitHero size={520} rotation={-41}>
-          <div className="size-2 rounded-full bg-emerald-300/20" />
-        </OrbitHero>
-        <OrbitHero size={650} rotation={-5}>
-          <div className="size-2 rounded-full bg-emerald-300/20" />
+        <OrbitHero size={800} rotation={-72} shouldOrbit={true} OrbitDuration="57s" shouldSpin={true} spinDuration="18s">
+          <StarIcon className="size-28 text-emerald-300" />
         </OrbitHero>
       </div>
       <div className="container">
@@ -63,7 +63,7 @@ export const HeroSection = () => {
           />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
             <div className="bg-green-500 size-2.5 rounded-full relative">
-            <div className="bg-green-500 size-2.5 rounded-full absolute inset-0 animated animate-ping"></div>
+            <div className="bg-green-500 size-2.5 rounded-full absolute inset-0 animated animate-ping "></div>
             </div>
             <div className="text-sm font-medium"> 
               Available for new projects
