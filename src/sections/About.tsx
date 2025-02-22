@@ -1,6 +1,6 @@
+"use client";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import StarIcon from "@/assets/icons/star.svg";
 import BookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
@@ -9,11 +9,12 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
-import { Tech } from "@/components/Tech";
 import mapImage from "@/assets/images/map.png";
 import smileEmoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { Toolbox } from "@/components/Toolbox";
+import {motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxitems = [
   {
@@ -82,6 +83,7 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const contrainRef = useRef(null);
   return (
     <div className="">
       <div className="container">
@@ -106,15 +108,15 @@ export const AboutSection = () => {
 
             <Card className="h-[320px] p-0 md:col-span-3 ">
               <CardHeader
-                title="My Toolbox"
-                description="Discover the tools that help me build."
-                className="px-6 pt-6"
+              title="My Toolbox"
+              description="Discover the tools that help me build."
+              className="px-6 pt-6"
               />
-              <Toolbox Items={toolboxitems} className="mt-6" />
+              <Toolbox Items={toolboxitems} className="mt-6"  itemsWrapperClassName="animate-move-left [animation-duration:30s]"/>
               <Toolbox
-                Items={toolboxitems}
-                className="mt-6  "
-                itemsWrapperClassName="-translate-x-1/2"
+              Items={toolboxitems}
+              className="mt-6"
+              itemsWrapperClassName="translate-x-full animate-move-right [animation-duration:30s]"
               />
             </Card>
           </div>
@@ -127,21 +129,23 @@ export const AboutSection = () => {
                 description="Explore my interests and hobbies beyond the digital realms."
                 className="px-6 py-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={contrainRef}>
                 {hobbies.map((item, index) => (
-                  <div
+                  <motion.div
                     key={index}
                     className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                     style={{
                       left: item.left,
                       top: item.top,
                     }}
+                    drag
+                    dragConstraints={contrainRef}
                   >
                     <span className="font-medium text-gray-950">
                       {item.title}
                     </span>
                     <span>{item.Emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -155,6 +159,8 @@ export const AboutSection = () => {
                 className="h-full w-full object-cover"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400 to-sky-400 -z-10 animate-ping [animation-duration:2s]" > </div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400 to-sky-400 -z-10 " > </div>
                 <Image src={smileEmoji} alt="smile emoji" className="size-20" />
               </div>
             </Card>

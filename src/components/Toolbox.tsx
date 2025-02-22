@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { Tech } from "./Tech";
+import { Fragment } from "react";
 
 export const Toolbox = ({
   Items,
@@ -23,14 +24,18 @@ export const Toolbox = ({
           itemsWrapperClassName
         )}
       >
-        {Items.map((item) => (
-          <div
-            key={item.title}
-            className="inline-flex gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
-          >
-            <Tech component={item.iconType} />
-            <span className=" mt-2">{item.title}</span>
-          </div>
+        {Array.from({ length: 2 }).map((_, idx) => (
+          <Fragment key={idx}>
+            {Items.map((item) => (
+              <div
+                key={item.title}
+                className="inline-flex gap-4 py-2 px-3 outline outline-2 outline-white/10 rounded-lg"
+              >
+                <Tech component={item.iconType} />
+                <span className=" mt-2">{item.title}</span>
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
     </div>
