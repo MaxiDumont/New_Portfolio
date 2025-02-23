@@ -50,7 +50,7 @@ export const Header = () => {
           Projects
         </a>
         <a
-          href="#about"
+          href="#tape"
           className={`nav-item ${activeSection === "about" ? "bg-white text-gray-900" : "hover:bg-white/70 hover:text-gray-900"}`}
           onClick={() => handleNavClick("about")}
         >
