@@ -97,7 +97,7 @@ export const AboutSection = () => {
           <div className="md:grid md:grid-cols-5 md:gap-8">
             <Card className="h-[320px] md:col-span-2 mb-8">
               <CardHeader
-                title="My Reading List"
+                title="My Reading Lis"
                 description="Explore the books that have shaped my thinking and inspired me."
               />
               <div className="w-40 mx-auto mt-8">
