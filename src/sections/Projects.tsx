@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import darkSaasLandingPage from "@/assets/images/pro1.png";
+import lightSaasLandingPage from "@/assets/images/pro2.png";
+import aiStartupLandingPage from "@/assets/images/pro3.png";
 import Image from "next/image";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -9,39 +9,39 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "Filify",
+    year: "2023",
+    title: "A movie website",
     results: [
-      { title: "Enhanced user experience by 40%" },
+      { title: "Designed a responsive UI with MUI components" },
       { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Added local storage support for saving favorites" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "https://movies-api-omega-one.vercel.app/",
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Old React Portfolio",
+    year: "2023",
+    title: "Personal Portfolio Website",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Integrated Sanity CMS for dynamic content management" },
+      { title: "Optimized performance with lazy loading and code splitting" },
+      { title: "Designed a fully responsive UI with React and Tailwind CSS" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://maximiliano-portfolio.netlify.app/",
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Laravel PHP Back-end",
+    year: "2022",
+    title: "User Management & Content System",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Implemented secure user authentication with Laravel Sanctum" },
+      { title: "Ensured secure password hashing with Laravel's built-in security features" },
+      { title: "Enabled private post creation with user-specific access control" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://github.com/MaxiDumont/Laravel-Back-end",
     image: aiStartupLandingPage,
   },
 ];
@@ -59,7 +59,7 @@ export const ProjectsSection = () => {
           Featured Projects
         </h2>
         <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto ">
-          See how I transformed conceptsw into engaging digital experiences
+          See how I transformed concepts into engaging digital experiences
         </p>
         <div className="flex flex-col mt-10 md:mt-20 gap-20 ">
           {portfolioProjects.map((project, projectIndex) => (
@@ -96,10 +96,12 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 ">
-                    <span>Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-4 ml-2" />
-                  </button>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 ">
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-4 ml-2" />
+                    </button>
+                  </a>
                 </div>
                 <div className="relative">
                   <Image

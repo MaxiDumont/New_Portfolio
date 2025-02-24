@@ -10,6 +10,7 @@ import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import mapImage from "@/assets/images/map.png";
+import mapImage2 from "@/assets/images/map2.png";
 import smileEmoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { Toolbox } from "@/components/Toolbox";
@@ -154,7 +155,7 @@ export const AboutSection = () => {
 
             <Card className="h-[320px] p-0 relative col-span-2">
               <Image
-                src={mapImage}
+                src={mapImage2}
                 alt="Map"
                 className="h-full w-full object-cover"
               />
