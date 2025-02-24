@@ -1,7 +1,7 @@
 "use client";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
-import BookImage from "@/assets/images/book-cover.png";
+import BookImage from "@/assets/images/Book.png";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
@@ -9,13 +9,13 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
-import mapImage from "@/assets/images/map.png";
 import mapImage2 from "@/assets/images/map2.png";
 import smileEmoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { Toolbox } from "@/components/Toolbox";
 import {motion } from "framer-motion";
 import { useRef } from "react";
+
 
 const toolboxitems = [
   {
@@ -97,10 +97,10 @@ export const AboutSection = () => {
           <div className="md:grid md:grid-cols-5 md:gap-8">
             <Card className="h-[320px] md:col-span-2 mb-8">
               <CardHeader
-                title="My Reading Lis"
-                description="Explore the books that have shaped my thinking and inspired me."
+                title="My Favorite Book"
+                description=" End? No, the journey doesn't end here. Death is just another path, one that we all must take. The grey rain-curtain of this world rolls back, and all turns to silver glass, and then you see it."
               />
-              <div className="w-40 mx-auto mt-8">
+              <div className="w-40 mx-auto mt-2">
                 <Image src={BookImage} alt="Book Cover" />
               </div>
             </Card>
@@ -154,6 +154,7 @@ export const AboutSection = () => {
             {/*card separetor*/}
 
             <Card className="h-[320px] p-0 relative col-span-2">
+              <a href="https://www.google.com/maps/place/R%C3%B8dovre+Stationsvej+52,+2610+R%C3%B8dovre,+Dinamarca/@55.6584117,12.4584574,13.53z/data=!4m15!1m8!3m7!1s0x4652511399d32da5:0xa00afcc1d5073b0!2sR%C3%B8dovre,+Dinamarca!3b1!8m2!3d55.673514!4d12.465726!16s%2Fg%2F122z32tb!3m5!1s0x4652514c1bbc8687:0xf044c6e147b14e45!8m2!3d55.6652446!4d12.4562056!16s%2Fg%2F11h2n2hk0c?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
               <Image
                 src={mapImage2}
                 alt="Map"
@@ -164,6 +165,7 @@ export const AboutSection = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-400 to-sky-400 -z-10 " > </div>
                 <Image src={smileEmoji} alt="smile emoji" className="size-20" />
               </div>
+              </a>
             </Card>
           </div>
         </div>
