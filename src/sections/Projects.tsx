@@ -29,7 +29,7 @@ const portfolioProjects = [
       { title: "Optimized performance with lazy loading and code splitting" },
       { title: "Designed a fully responsive UI with React and Tailwind CSS" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
+    link: "https://maximiliano-portfolio.netlify.app/",
     image: lightSaasLandingPage,
   },
   {
@@ -41,7 +41,7 @@ const portfolioProjects = [
       { title: "Ensured secure password hashing with Laravel's built-in security features" },
       { title: "Enabled private post creation with user-specific access control" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://github.com/MaxiDumont/Laravel-Back-end",
     image: aiStartupLandingPage,
   },
 ];
