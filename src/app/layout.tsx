@@ -15,7 +15,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "MaxiPortfolio",
   description: "Created with the help of Frontend Tribe",
 };
 
